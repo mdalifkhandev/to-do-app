@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>To-Do App</title>
+</head>
+<body class="bg-[#f1f3f4] min-h-screen p-6 font-sans">
+
+  <!-- Input Section -->
+  <div class="max-w-3xl mx-auto mb-10">
+    <div class="bg-white rounded-xl shadow-md p-6">
+      <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">📝 My To-Do App</h1>
+
+      <div class="space-y-4">
+        <input id="name" type="text" placeholder="Task Title"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <textarea id="details" rows="3" placeholder="Task Details"
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+
+        <div class="flex space-x-4">
+          <button id="postButton"
+            class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition">
+            ➕ Add Task
+          </button>
+          <button id="updateButton"
+            class="flex-1 hidden bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg transition">
+            ✅ Update Task
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Task List Section -->
+  <div id="taskList"
+    class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <!-- Tasks will be inserted here dynamically -->
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
